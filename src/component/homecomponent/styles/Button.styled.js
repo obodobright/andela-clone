@@ -11,4 +11,5 @@ export const Button = styled.div `
   color: ${({ color }) => color};
   font-weight: bold;
   cursor: pointer;
+  border-radius: ${({ bd }) => bd};
 `;
