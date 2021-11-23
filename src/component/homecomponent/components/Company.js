@@ -69,7 +69,7 @@ const Text = styled.div`
   color: #ffb449;
   font-weight: ;
   padding-left: 10px;
-  padding: 10px 10px 5px 5px;
+  padding: 10px 10px 5px 25px;
 `;
 const Wrapper = styled.div`
   width: 100%;

@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import Community from "./components/community";
 import Companies from "./components/Company";
 import Hero from "./components/hero";
 
@@ -19,6 +20,7 @@ export const HomeRoute = () => {
       <ThemeProvider theme={theme}>
         <Hero />
         <Companies />
+        <Community />
       </ThemeProvider>
     </div>
   );
