@@ -1,7 +1,9 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
+import CardContainer from "../homecomponent/components/card/CardContainer";
 import Community from "./components/community";
 import Companies from "./components/Company";
+import Contact from "./components/contactandela";
 import Hero from "./components/hero";
 
 export const HomeRoute = () => {
@@ -22,6 +24,8 @@ export const HomeRoute = () => {
         <Companies />
         <Community />
       </ThemeProvider>
+      <CardContainer />
+      <Contact />
     </div>
   );
 };
