@@ -1,7 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
+import { HomeRoute } from "./homecomponent/HomeRoute";
 
 const HomePage = () => {
-  <div>Hello Andela</div>;
+  return (
+    <div>
+      <HomeRoute />
+    </div>
+  );
 };
 export default HomePage;
