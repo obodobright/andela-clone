@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import communityImg from "../../../assets/assethome/icon_ourCommunity.svg";
 import v3img from "../../../assets/assethome/v3-1.png";
+import { Button } from "../styles/Button.styled";
 const AndelaCommunity = () => {
   return (
     <Container>
@@ -15,9 +16,11 @@ const AndelaCommunity = () => {
           <span>Our Community</span>
         </WrapperHeading>
         <Content>
-          <ImgContainer>
+          <ImgContent>
+            <ImgContainer src="bg_ourCommunity.webp" />
             <ContentImg src={v3img} />
-          </ImgContainer>
+            <MyImg src="yellowlines.webp" alt="" />
+          </ImgContent>
           <ContentContainer>
             <Eng>
               <h3>100,000+ Software Engineers</h3>
@@ -40,6 +43,9 @@ const AndelaCommunity = () => {
                 many more.
               </div>
             </Eng>
+            <Button bg="#4769E2" color="white" margin="20px 0 0 0">
+              Learn More
+            </Button>
           </ContentContainer>
         </Content>
       </Wrapper>
@@ -49,16 +55,36 @@ const AndelaCommunity = () => {
 
 export default AndelaCommunity;
 
-const ImgContainer = styled.div`
-  width: 400px;
-  height: 500px;
-  background: url("world.png");
+const ImgContent = styled.div`
   position: relative;
+`;
+const MyImg = styled.img`
+  position: absolute;
+  width: 200px;
+  top: 70px;
+  left: -200px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+const ImgContainer = styled.img`
+  width: 750px;
+  height: 500px;
+  position: relative;
+  left: -40px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const ContentImg = styled.img`
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: ;
+  top: 40px;
+  left: 60px;
+  @media (max-width: 768px) {
+    position: static;
+  }
 `;
 
 const Eng = styled.div`
@@ -76,14 +102,22 @@ const Eng = styled.div`
   }
 `;
 const ContentContainer = styled.div`
-  width: 450px;
-  margin-left: 20px;
-  // height: 500px;
-  // background: blue;
+  width: 500px;
+  position: relative;
+  left: -70px;
+  top: 35px;
+  @media (max-width: 768px) {
+    position: static;
+    width: 300px;
+    clear: none;
+    width: 100px;
+  }
 `;
 const Content = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
 `;
 
 const Div = styled.div`
@@ -96,6 +130,10 @@ const Div = styled.div`
   position: absolute;
   right: 60px;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const Image = styled.img`
   width: 70px;

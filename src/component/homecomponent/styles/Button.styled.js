@@ -7,9 +7,10 @@ export const Button = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 17px;
   color: ${({ color }) => color};
-  font-weight: bold;
+  font-weight: 400;
   cursor: pointer;
   border-radius: ${({ bd }) => bd};
+  margin: ${({ margin }) => margin};
 `;

@@ -5,6 +5,7 @@ import Community from "./components/community";
 import Companies from "./components/Company";
 import Contact from "./components/contactandela";
 import Hero from "./components/hero";
+import Testimony from "./components/testimony";
 
 export const HomeRoute = () => {
   const theme = {
@@ -26,6 +27,7 @@ export const HomeRoute = () => {
       </ThemeProvider>
       <CardContainer />
       <Contact />
+      <Testimony />
     </div>
   );
 };
