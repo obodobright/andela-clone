@@ -7,7 +7,9 @@ const ThirdComp = () => {
   return (
     <Container>
       <Wrapper>
-        <Image src={logo} />
+        <ImageHolder>
+          <Image src={logo} />
+        </ImageHolder>
         <Content>
           <Title>Why Andela?</Title>
           <Desc>
@@ -34,6 +36,16 @@ const ThirdComp = () => {
 };
 
 export default ThirdComp;
+
+const ImageHolder = styled.div`
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #3359df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const IconWrapper = styled.div`
   width: 80px;
@@ -96,9 +108,8 @@ const Desc = styled.div`
 `;
 
 const Image = styled.img`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
   background-color: #3359df;
   object-fit: cover;
 `;

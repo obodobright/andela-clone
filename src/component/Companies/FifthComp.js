@@ -33,7 +33,7 @@ const Table = styled.div`
 
 const Title = styled.div`
   font-size: 45px;
-  line-height: 53px;
+  line-height: 60px;
   color: 1f2c46;
   text-align: center;
   letter-spacing: 1px;

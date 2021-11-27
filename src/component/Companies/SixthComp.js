@@ -43,7 +43,7 @@ const ImageWrapper = styled.div`
   width: 60%;
   height: 800px;
   position: relative;
-  overflow: none;
+  overflow: hidden;
   margin-bottom: 100px;
 `;
 
@@ -55,7 +55,6 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
 `;
 
 const Span = styled.div`
@@ -108,6 +107,7 @@ const Icon = styled.img`
 const Content = styled.div`
   width: 700px;
   margin-left: 80px;
+  margin-top: 100px;
 `;
 
 const Wrapper = styled.div`

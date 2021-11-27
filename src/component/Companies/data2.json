@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "number": "1",
+        "title":"Talk to one of our industry experts",
+        "desc":"After you fill out the Hire Talent form, a member of our Matching team will schedule a consultation with you to fully understand your technical needs, culture, and strategic route."
+    },
+    {
+        "id": "2",
+        "number": "2",
+        "title":"Work with hand-selected talent",
+        "desc":"Within three to four business days after first reaching out to Andela, we will match you with the right talent for your team. You are ensured not only of velocity but of top quality."
+    },
+    {
+        "id": "3",
+        "number": "3",
+        "title":"The Right Fit, Guaranteed",
+        "desc":"We offer a 2-week no-risk trial period and then will be with you every step of the onboarding process to ensure a seamless process and team integration."
+    }
+]

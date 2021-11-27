@@ -5,6 +5,8 @@ import ThirdComp from "./ThirdComp";
 import FourthComp from "./FourthComp";
 import FifthComp from "./FifthComp";
 import SixthComp from "./SixthComp";
+import SeventhComp from "./SeventhComp";
+import EightComp from "./EightComp";
 
 const Company = () => {
   return (
@@ -15,6 +17,8 @@ const Company = () => {
       <FourthComp />
       <FifthComp />
       <SixthComp />
+      <SeventhComp />
+      <EightComp />
     </div>
   );
 };
