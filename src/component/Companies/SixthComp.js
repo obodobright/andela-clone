@@ -45,6 +45,13 @@ const ImageWrapper = styled.div`
   position: relative;
   overflow: hidden;
   margin-bottom: 100px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 600px;
+
+    margin-bottom: 0px;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -55,19 +62,32 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 const Span = styled.div`
   font-size: 45px;
   line-height: 55px;
   color: 1f2c46;
+
   font-weight: 500;
   margin: 30px 0;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+  }
 `;
 
 const Desc = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   line-height: 35px;
   color: #565b73;
   letter-spacing: 1.8px;
@@ -75,16 +95,28 @@ const Desc = styled.div`
   margin-top: 20px;
 
   span {
-    color: #6eb8f4;
+    color: #8f7de8;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+    line-height: 25px;
   }
 `;
 
 const Title = styled.div`
-  font-size: 35px;
+  font-size: 38px;
+  font-weight: 500;
   line-height: 45px;
   letter-spacing: 1.5px;
   margin-top: 30px;
   font-family: lato, sans-serif;
+  color: #1f2c46;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 35px;
+  }
 `;
 
 const Image = styled.img`
@@ -92,8 +124,15 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   position: absolute;
-  right: -150px;
+  right: -200px;
   top: -30px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 500px;
+    right: 0px;
+    top: 0px;
+  }
 `;
 
 const Icon = styled.img`
@@ -102,12 +141,23 @@ const Icon = styled.img`
   border-radius: 50%;
   background-color: #3359df;
   object-fit: contain;
+
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const Content = styled.div`
-  width: 700px;
-  margin-left: 80px;
+  width: 800px;
+  margin-left: 120px;
   margin-top: 100px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -115,6 +165,12 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Container = styled.div`

@@ -40,6 +40,11 @@ const Title = styled.div`
   font-family: lato, sans-serif;
   font-weight: 500;
   margin-top: 30px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
 `;
 
 const Desc = styled.div`
@@ -49,10 +54,19 @@ const Desc = styled.div`
   color: 565b73;
   text-align: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+    line-height: 25px;
+  }
 `;
 
 const Content = styled.div`
   width: 60%;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -63,12 +77,22 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 const Logo = styled.img`
   width: 70px;
   height: 70px;
   object-fit: cover;
+
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const Container = styled.div`
@@ -83,4 +107,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 70px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 0;
+  }
 `;

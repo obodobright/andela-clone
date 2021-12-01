@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import image from "./Assets/oleh.png";
-import icon from "./Assets/icon_world.png";
 
 const FirstComp = () => {
   return (
@@ -38,6 +37,11 @@ export default FirstComp;
 
 const Button = styled.div`
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const But2 = styled.button`
@@ -47,9 +51,13 @@ const But2 = styled.button`
   outline: none;
   border: none;
   font-size: 20px;
-  background-color: white;
+  background-color: transparent;
   margin-left: 25px;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    margin: 15px 0;
+  }
 `;
 
 const But1 = styled.button`
@@ -70,6 +78,11 @@ const But1 = styled.button`
     cursor: pointer;
     background-color: #ffb745;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    font-size: 17px;
+  }
 `;
 
 const Image = styled.img`
@@ -78,6 +91,11 @@ const Image = styled.img`
   height: 500px;
   margin-left: 70px;
   margin-top: 50px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin: 0px;
+  }
 `;
 
 const Desc = styled.div`
@@ -88,6 +106,11 @@ const Desc = styled.div`
   color: #565b73;
   letter-spacing: 1px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;
 
 const Title = styled.div`
@@ -98,6 +121,11 @@ const Title = styled.div`
   color: #1f2c46;
   margin-bottom: 20px;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
 `;
 
 const Content = styled.div`
@@ -105,6 +133,11 @@ const Content = styled.div`
   margin-right: 50px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-right: 0px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -112,9 +145,15 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   padding-top: 170px;
   padding-bottom: 30px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Container = styled.div`

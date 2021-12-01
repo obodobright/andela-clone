@@ -32,6 +32,12 @@ const ContentHolder = styled.div`
   flex-direction: column;
   margin-top: 60px;
   margin-left: 30px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
 `;
 
 const Content = styled.div`
@@ -53,24 +59,40 @@ const Number = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 22px;
+  font-size: 24px;
   color: #1f2c46;
   margin-bottom: 20px;
   font-family: lato, sans-serif;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
 `;
 
 const Desc = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   color: #565b73;
   line-height: 38px;
   letter-spacing: 1px;
   font-family: lato, sans-serif;
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+    line-height: 28px;
+  }
 `;
 
 const ImageHolder = styled.div`
   margin-top: 120px;
   width: 700px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-top: 40px;
+  }
 `;
 
 const Image = styled.img`
@@ -89,4 +111,10 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

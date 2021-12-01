@@ -23,8 +23,9 @@ const ThirdComp = () => {
           {data?.map((props, i) => (
             <Card key={i}>
               <IconWrapper>
-                <Icon src={props.icon} />
+                <Icon src={props.icon} bg />
               </IconWrapper>
+
               <Text>{props.title}</Text>
               <Desc>{props.desc}</Desc>
             </Card>
@@ -45,6 +46,12 @@ const ImageHolder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -52,15 +59,23 @@ const IconWrapper = styled.div`
   height: 80px;
   border-radius: 50%;
   background-color: #5bb3b7;
+  // background-color: ${({ bg }) => (bg ? "red" : "green")};
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+
+
 `;
 
 const Text = styled.div`
   font-size: 30px;
   margin: 15px 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    margin: 10px 0;
+  }
 `;
 
 const CardWrapper = styled.div`
@@ -68,6 +83,11 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 120px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin-top: 20px;
+  }
 `;
 
 const Card = styled.div`
@@ -80,31 +100,46 @@ const Card = styled.div`
 `;
 
 const Icon = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 `;
 
 const Content = styled.div`
   width: 900px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.div`
-  font-size: 45px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 500;
   line-height: 52px;
   margin: 30px 0;
   color: #1f2c46;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    font-size: 25px;
+    margin: 15px 0;
+    text-align: center;
+  }
 `;
 
 const Desc = styled.div`
   font-size: 20px;
-  line-height: 35px;
+  line-height: 30px;
   font-weight: 300;
   letter-spacing: 1px;
   font-family: lato, sans-serif;
   color: #565b73;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Image = styled.img`
@@ -112,6 +147,11 @@ const Image = styled.img`
   height: 70px;
   background-color: #3359df;
   object-fit: cover;
+
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const Container = styled.div`
@@ -125,5 +165,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding: 100px 0;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
 `;

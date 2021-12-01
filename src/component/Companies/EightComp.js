@@ -48,6 +48,12 @@ const Button = styled.button`
     cursor: pointer;
     background-color: #ffb745;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
 `;
 
 const Title = styled.div`
@@ -56,6 +62,10 @@ const Title = styled.div`
   letter-spacing: 1px;
   font-family: lato, sans-serif;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const Desc = styled.div`
@@ -65,20 +75,39 @@ const Desc = styled.div`
   letter-spacing: 1px;
   font-family: lato, sans-serif;
   margin-bottom: 70px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 17px;
+    line-height: 28px;
+  }
 `;
 
 const Content = styled.div`
   width: 45%;
   margin-top: 200px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-top: 40px;
+  }
 `;
 
 const ImageHolder = styled.div`
   margin-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin-left: 0px;
+  }
 `;
 
 const Image = styled.img`
   width: 700px;
   object-fit: Contain;
+
+  @media screen and (max-width: 768px) {
+    width: 350px;
+  }
 `;
 
 const Container = styled.div`
@@ -90,7 +119,14 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
   padding: 50px 0;
+  display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
 `;
