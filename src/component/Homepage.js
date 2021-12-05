@@ -1,12 +1,16 @@
 import React from "react";
-// import styled from "styled-components";
 import { HomeRoute } from "./homecomponent/HomeRoute";
+import { Login } from "./register/Login";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div>
-      <HomeRoute />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeRoute />} />
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default HomePage;

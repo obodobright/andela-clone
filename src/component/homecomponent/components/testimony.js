@@ -33,6 +33,8 @@ export default Testimony;
 const CardContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 const Card = styled.div`
   width: 450px;
@@ -48,6 +50,9 @@ const Card = styled.div`
   transition: all 350ms;
   &:hover {
     border: 1px solid rgb(51 89 223 / 50%);
+  }
+  @media (max-width: 768px) {
+    width: 350px;
   }
 `;
 const Head = styled.div`

@@ -43,7 +43,7 @@ const AndelaCommunity = () => {
                 many more.
               </div>
             </Eng>
-            <Button bg="#4769E2" color="white" margin="20px 0 0 0">
+            <Button bg="#4769E2" color="white" margin="20px 0 0 0" wd="150px">
               Learn More
             </Button>
           </ContentContainer>
@@ -84,6 +84,7 @@ const ContentImg = styled.img`
   left: 60px;
   @media (max-width: 768px) {
     position: static;
+    width: 100%;
   }
 `;
 
@@ -93,12 +94,17 @@ const Eng = styled.div`
     font-weight: 400;
     margin: 20px 0;
     color: #1f2c46;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
   div {
     font-size: 18px;
     line-height: 1.3;
     opacity: 0.6;
-    margin-bottom: ;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 `;
 const ContentContainer = styled.div`
@@ -107,10 +113,9 @@ const ContentContainer = styled.div`
   left: -70px;
   top: 35px;
   @media (max-width: 768px) {
-    position: static;
-    width: 300px;
-    clear: none;
-    width: 100px;
+    left: 0px;
+    padding: 0 20px;
+    width: 450px;
   }
 `;
 const Content = styled.div`

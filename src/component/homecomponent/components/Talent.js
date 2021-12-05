@@ -27,7 +27,7 @@ const Talents = () => {
               <small>Kenya</small>
             </TalentInfo>
           </ContentTalent>
-          <ContentTalent>
+          <ContentTalent1>
             <Img src={alfred} />
             <TalentInfo>
               <h2>Front-end Engineer</h2>
@@ -35,7 +35,7 @@ const Talents = () => {
               <div>4 years of experience</div>
               <small>Kenya</small>
             </TalentInfo>
-          </ContentTalent>
+          </ContentTalent1>
         </Content>
       </Wrapper>
     </Container>
@@ -46,12 +46,21 @@ export default Talents;
 const ContextText = styled.div`
   width: 150px;
   opacity: 0.6;
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
 `;
 const Content = styled.div`
   display: flex;
   justify-content: center;
   color: #1f2c46;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   &:before {
     content: "";
     width: 200px;
@@ -64,6 +73,9 @@ const Content = styled.div`
     background-repeat: no-repeat;
     left: 20px;
     bottom: 60px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -92,6 +104,14 @@ const Img = styled.img`
   height: 350px;
   object-fit: contain;
 `;
+const ContentTalent1 = styled.div`
+  width: 500px;
+  background: transparent;
+  display: flex;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
 const ContentTalent = styled.div`
   width: 500px;
   background: transparent;
@@ -100,6 +120,10 @@ const ContentTalent = styled.div`
 
 const Image = styled.img`
   width: 70px;
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
 `;
 const ImageHolder = styled.div`
   width: 100px;
@@ -110,6 +134,10 @@ const ImageHolder = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const WrapperHeading = styled.div`
@@ -123,7 +151,11 @@ const WrapperHeading = styled.div`
   span {
     font-size: 40px;
     color: #1f2c46;
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
   }
+
   &:after {
     content: "";
     width: 300px;
@@ -135,6 +167,9 @@ const WrapperHeading = styled.div`
     position: absolute;
     right: 100px;
     top: 80px;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 

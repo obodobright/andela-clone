@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import testimonialImg from "../../../assets/assethome/img_testimonial.png";
-import AndelaCommunity from "./andelaCommunity";
-import Talents from "./Talent";
 
 const Contact = () => {
   return (
@@ -19,8 +17,6 @@ const Contact = () => {
             <AuthCompany>CTO, SalesRabbit</AuthCompany>
           </QuoteContent>
         </Testimonial>
-        <AndelaCommunity />
-        <Talents />
       </Wrapper>
     </Container>
   );

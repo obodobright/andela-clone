@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.div `
-  width: 150px;
+  width: ${({ wd }) => wd};
   height: 50px;
   background: ${({ bg }) => bg};
   display: flex;

@@ -1,10 +1,13 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import CardContainer from "../homecomponent/components/card/CardContainer";
+import AndelaCommunity from "./components/andelaCommunity";
 import Community from "./components/community";
 import Companies from "./components/Company";
 import Contact from "./components/contactandela";
+import FooterMain from "./components/FooterContainer/Footer";
 import Hero from "./components/hero";
+import Talents from "./components/Talent";
 import Testimony from "./components/testimony";
 
 export const HomeRoute = () => {
@@ -27,7 +30,11 @@ export const HomeRoute = () => {
       </ThemeProvider>
       <CardContainer />
       <Contact />
+
+      <AndelaCommunity />
+      <Talents />
       <Testimony />
+      <FooterMain />
     </div>
   );
 };

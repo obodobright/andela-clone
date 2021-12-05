@@ -8,7 +8,7 @@ const Community = () => {
         <WrapperTitle>Community</WrapperTitle>
         <Content>
           <MessageBox>A Message from Andela’s CEO: Announcement of Series E Funding</MessageBox>
-          <Button bg="#1E2A44" color="white" bd="5px">
+          <Button bg="#1E2A44" color="white" bd="5px" wd="150px">
             Read Now
           </Button>
         </Content>

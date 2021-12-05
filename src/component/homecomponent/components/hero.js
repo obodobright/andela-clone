@@ -9,7 +9,7 @@ const Hero = () => {
       <Wrapper>
         <HeroText>
           <TextTitle>Build remote engineering teams with the world’s top talent.</TextTitle>
-          <Button bg="blue" color="white">
+          <Button bg="blue" color="white" wd="150px">
             Hire my Talents
           </Button>
         </HeroText>
