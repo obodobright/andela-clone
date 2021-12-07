@@ -6,6 +6,7 @@ import Community from "./components/community";
 import Companies from "./components/Company";
 import Contact from "./components/contactandela";
 import FooterMain from "./components/FooterContainer/Footer";
+import { Header } from "./components/Header";
 import Hero from "./components/hero";
 import Talents from "./components/Talent";
 import Testimony from "./components/testimony";
@@ -24,6 +25,7 @@ export const HomeRoute = () => {
   return (
     <div>
       <ThemeProvider theme={theme}>
+        <Header />
         <Hero />
         <Companies />
         <Community />
