@@ -42,8 +42,9 @@ const JoinDetails = () => {
 
 export default JoinDetails;
 const Img = styled.img`
-  width: 100px;
-  object-fit: cover;
+  width: %;
+  height: 45px;
+  object-fit: contain;
 `;
 const ImgHolder = styled.div`
   display: flex;
@@ -51,6 +52,10 @@ const ImgHolder = styled.div`
   position: relative;
   top: 200px;
   justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+  background: ;
+  height: 50px;
 `;
 
 const Desc = styled.p`

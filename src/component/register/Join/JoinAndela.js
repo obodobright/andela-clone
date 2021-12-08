@@ -1,14 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 import DataSignUp from "./DataSignUp";
 import JoinDetails from "./JoinDetails";
 
 const JoinAndela = () => {
   return (
-    <div style={{ display: "flex" }}>
+    <Container style={{ display: "flex" }}>
       <JoinDetails />
       <DataSignUp />
-    </div>
+    </Container>
   );
 };
 
 export default JoinAndela;
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+`;
