@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import SelectForm from "./SelectForm";
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+  uploadBytes,
+  uploadBytesResumable,
+} from "firebase/storage";
+import { firestore } from "../../../firebase/base";
 
 export const Form = () => {
   const [input, setInput] = useState({
@@ -11,14 +19,40 @@ export const Form = () => {
     profiency: "",
     experience: "",
   });
+  const inputRef = useRef();
+
   const [pdf, setPdf] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [showExit, setShowExit] = useState(false);
   const UpdateResume = (e) => {
     const file = e.target.files[0];
-    // setPdf(file);
-    const resume = URL.createObjectURL(file);
-    console.log(resume);
-  };
+    const saveFile = URL.createObjectURL(file);
+    console.log(saveFile);
 
+    // to get reference for storage
+    const storageRef = getStorage();
+    const uploadFile = ref(storageRef, "pdf/ " + file.name);
+    const resumeUpload = uploadBytesResumable(uploadFile, file);
+
+    // to push to firebase to create a storage bucket
+    resumeUpload.on(
+      "state_changed",
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(Math.floor(progress));
+        setProgress(Math.floor(progress));
+      },
+      (err) => {
+        console.log(err.message);
+      },
+      () => {
+        getDownloadURL(resumeUpload.snapshot.ref).then((download) => {
+          console.log(download);
+          setPdf(file.name);
+        });
+      }
+    );
+  };
   useEffect(() => {
     document.title = "Join Our Global Talent Network | Andela";
   });
@@ -37,7 +71,7 @@ export const Form = () => {
       <InputHolder>
         <Inputt>
           <Label>Email</Label>
-          <Input type="email" name="email" required />
+          <Input type="email" name="email" required ref={inputRef} />
         </Inputt>
         <Inputt>
           <Label>Country</Label>
@@ -114,7 +148,15 @@ export const Form = () => {
             style={{ display: "none" }}
             onChange={UpdateResume}
           />
-          <p>{pdf}</p>
+          {progress > 0 && (
+            <ResumeName>
+              {pdf}
+              <div>
+                <span style={{ padding: "3px" }}>{progress >= 99.9 ? "completed" : progress}</span>
+                <span style={{ cursor: "pointer" }}>x</span>
+              </div>
+            </ResumeName>
+          )}
         </Inputt>
         <Inputt>
           <Label>Last Name</Label>
@@ -125,6 +167,19 @@ export const Form = () => {
   );
 };
 
+const ResumeName = styled.div`
+  width: 280px;
+  height: 20px;
+  background: #eeeeee;
+  margin: 20px auto;
+  border-radius: 2px;
+  padding: 5px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 const LabelHelper = styled.label`
   border: 1px solid lightgray;
   width: 100px;
