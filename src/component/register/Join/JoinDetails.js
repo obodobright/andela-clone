@@ -31,8 +31,8 @@ const JoinDetails = () => {
           <p>Sign up and be one step closer to joining the engineering team at:</p>
         </Content>
         <ImgHolder>
-          {images?.map((img) => (
-            <Img src={img} />
+          {images?.map((img, index) => (
+            <Img src={img} key={index} />
           ))}
         </ImgHolder>
       </Wrapper>
@@ -115,4 +115,8 @@ const Container = styled.div`
   left: 0;
   z-index: 1;
   overflow: auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

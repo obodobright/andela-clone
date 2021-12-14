@@ -16,11 +16,10 @@ const Select = styled.select`
   background-position: right;
   background-size: 15px;
 `;
-export const SelectForm = () => {
-  const [selected, setSelected] = useState("");
+export const SelectForm = ({ values, name, change }) => {
   return (
     <div>
-      <Select value={selected} onChange={(e) => setSelected(e.target.value)}>
+      <Select value={values} onChange={change} name={name}>
         <option value="Select">Select...</option>
         <option value="Afganistan">Afghanistan</option>
         <option value="Albania">Albania</option>
