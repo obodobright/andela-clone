@@ -69,7 +69,7 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 22px;
+  font-size: 20px;
   line-height: 38px;
   color: #565b73;
   letter-spacing: 1px;
@@ -83,7 +83,7 @@ const Desc = styled.div`
 `;
 
 const Content = styled.div`
-  width: 45%;
+  width: 42%;
   margin-top: 200px;
 
   @media screen and (max-width: 768px) {

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import logo from "./Assets/icon_andela.png";
 import image from "./Assets/icon-checkmark.png";
+import Table from "./TableComp";
+import TableComp from "./TableComp";
 
 const FifthComp = () => {
   return (
@@ -19,7 +21,7 @@ const FifthComp = () => {
           </Desc>
         </Content>
 
-        <Table></Table>
+        <TableComp />
       </Wrapper>
     </Container>
   );
@@ -27,12 +29,8 @@ const FifthComp = () => {
 
 export default FifthComp;
 
-const Table = styled.div`
-  display: table;
-`;
-
 const Title = styled.div`
-  font-size: 45px;
+  font-size: 47px;
   line-height: 60px;
   color: 1f2c46;
   text-align: center;
@@ -48,10 +46,10 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 20px;
+  font-size: 22px;
   line-height: 32px;
   letter-spacing: 1px;
-  color: 565b73;
+  color: #565b73;
   text-align: center;
   margin-top: 20px;
 
@@ -62,7 +60,7 @@ const Desc = styled.div`
 `;
 
 const Content = styled.div`
-  width: 60%;
+  width: 58%;
 
   @media screen and (max-width: 768px) {
     width: 90%;

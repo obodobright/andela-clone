@@ -40,7 +40,7 @@ const SixthComp = () => {
 export default SixthComp;
 
 const ImageWrapper = styled.div`
-  width: 60%;
+  width: 850px;
   height: 800px;
   position: relative;
   overflow: hidden;
@@ -49,8 +49,23 @@ const ImageWrapper = styled.div`
   @media screen and (max-width: 768px) {
     width: 100%;
     height: 600px;
-
     margin-bottom: 0px;
+  }
+`;
+
+const Image = styled.img`
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  right: -200px;
+  top: -60px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 500px;
+    right: 0px;
+    top: 0px;
   }
 `;
 
@@ -87,7 +102,7 @@ const Span = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 22px;
+  font-size: 19px;
   line-height: 35px;
   color: #565b73;
   letter-spacing: 1.8px;
@@ -105,9 +120,9 @@ const Desc = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 38px;
+  font-size: 39px;
   font-weight: 500;
-  line-height: 45px;
+  line-height: 50px;
   letter-spacing: 1.5px;
   margin-top: 30px;
   font-family: lato, sans-serif;
@@ -116,22 +131,6 @@ const Title = styled.div`
   @media screen and (max-width: 768px) {
     font-size: 20px;
     line-height: 35px;
-  }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  right: -200px;
-  top: -30px;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    height: 500px;
-    right: 0px;
-    top: 0px;
   }
 `;
 
@@ -149,8 +148,8 @@ const Icon = styled.img`
 `;
 
 const Content = styled.div`
-  width: 800px;
-  margin-left: 120px;
+  width: 750px;
+  margin-left: 100px;
   margin-top: 100px;
 
   @media screen and (max-width: 768px) {
@@ -164,7 +163,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
 
   @media screen and (max-width: 768px) {
     display: flex;

@@ -21,10 +21,7 @@ const FirstComp = () => {
             yours with top-tier vetted engineers, so you have more time to focus
             on your core business.
           </Desc>
-          <Button>
-            <But1>Get Started with Andela Today</But1>
-            <But2>Watch Video</But2>
-          </Button>
+          <Button>Hire talent</Button>
         </Content>
 
         <Image src={image} />
@@ -35,39 +32,15 @@ const FirstComp = () => {
 
 export default FirstComp;
 
-const Button = styled.div`
-  display: flex;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const But2 = styled.button`
-  width: 150px;
-  letter-spacing: 1px;
-  color: blue;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  background-color: transparent;
-  margin-left: 25px;
-  cursor: pointer;
-
-  @media screen and (max-width: 768px) {
-    margin: 15px 0;
-  }
-`;
-
-const But1 = styled.button`
-  width: 400px;
+const Button = styled.button`
+  width: 200px;
   height: 60px;
   border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffa309;
+  color: #414141;
   font-size: 20px;
   letter-spacing: 1px;
   outline: none;
@@ -114,7 +87,7 @@ const Desc = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 50px;
+  font-size: 53px;
   line-height: 65px;
   font-weight: bold;
   font-family: lato, sans-serif;

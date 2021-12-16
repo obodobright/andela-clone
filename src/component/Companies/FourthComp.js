@@ -31,7 +31,7 @@ const FourthComp = () => {
             <Desc>venture funding secured to date</Desc>
           </Card>
           <Card>
-            <Number bg="#3359DF">100K+</Number>
+            <Number bg="#3359DF">175K+</Number>
             <Desc>members of Andela’s technical community</Desc>
           </Card>
         </CardWrapper>
@@ -96,6 +96,7 @@ const Logos = styled.div`
 
 const Logo = styled.img`
   width: 110px;
+  height: 70px;
   object-fit: contain;
   margin: 0 50px;
 
@@ -123,7 +124,7 @@ const Sub = styled.div`
 const Desc = styled.div`
   width: 270px;
   font-size: 17px;
-  line-height: 35px;
+  line-height: 30px;
   text-align: center;
   color: #1f2c46;
   margin-top: 17px;
@@ -132,14 +133,15 @@ const Desc = styled.div`
 `;
 
 const Number = styled.div`
-  font-size: 45px;
+  font-size: 50px;
   font-weight: bold;
   margin-top: 50px;
+  font-family: lato, sans-serif;
   color: ${({ bg }) => bg};
 `;
 
 const Card = styled.div`
-  width: 350px;
+  width: 320px;
   height: 250px;
   border-radius: 8px;
   background-color: #f4f6fc;

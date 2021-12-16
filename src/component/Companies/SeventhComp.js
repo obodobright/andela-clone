@@ -27,7 +27,7 @@ const SeventhComp = () => {
 export default SeventhComp;
 
 const ContentHolder = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   margin-top: 60px;
@@ -45,8 +45,8 @@ const Content = styled.div`
 `;
 
 const Number = styled.div`
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   color: blue;
   border: 3px solid blue;
@@ -73,7 +73,7 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 22px;
+  font-size: 20px;
   color: #565b73;
   line-height: 38px;
   letter-spacing: 1px;
@@ -86,8 +86,9 @@ const Desc = styled.div`
 `;
 
 const ImageHolder = styled.div`
-  margin-top: 120px;
   width: 700px;
+  margin-top: 120px;
+  margin-left: 50px;
 
   @media screen and (max-width: 768px) {
     width: 80%;

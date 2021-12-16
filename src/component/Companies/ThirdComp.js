@@ -1,35 +1,93 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "./Assets/icon_andela.png";
-import data from "./Data.json";
+import img1 from "./Assets/icon_checkmark.svg";
+import img2 from "./Assets/icon-earth-globe-white.png";
+import img3 from "./Assets/icon-technical.png";
+import img4 from "./Assets/icon_arrow-1.png";
+import img5 from "./Assets/icon_03.png";
+import img6 from "./Assets/icon_04.png";
 
 const ThirdComp = () => {
   return (
     <Container>
       <Wrapper>
-        <ImageHolder>
-          <Image src={logo} />
-        </ImageHolder>
-        <Content>
-          <Title>Why Andela?</Title>
-          <Desc>
-            At Andela, Andela’s talent platform connects you with experienced
-            remote talent from around the world, so you can focus on building
-            your product and scaling your business.
-          </Desc>
-        </Content>
-
         <CardWrapper>
-          {data?.map((props, i) => (
-            <Card key={i}>
-              <IconWrapper>
-                <Icon src={props.icon} bg />
-              </IconWrapper>
+          <Card>
+            <IconWrapper bg="#3359DF">
+              <Icon src={img1} />
+            </IconWrapper>
 
-              <Text>{props.title}</Text>
-              <Desc>{props.desc}</Desc>
-            </Card>
-          ))}
+            <Title>Rigorous Vetting Process</Title>
+            <Desc>
+              Our hiring process is quick and efficient while also maintaining
+              the highest quality admission standards to ensure we can place you
+              with top-quality engineers at scale.
+            </Desc>
+          </Card>
+          <Card>
+            <IconWrapper bg="#FFAF30">
+              <Icon src={img2} />
+            </IconWrapper>
+
+            <Title>Vetted Talent from Multiple Regions</Title>
+            <Desc>
+              In today’s hypercompetitive hiring environment, companies that
+              limit themselves to local hires are at a severe disadvantage. With
+              Andela, you can tap into our pool of highly-qualified talent from
+              around the world and cut your hiring timelines down from months to
+              days.
+            </Desc>
+          </Card>
+          <Card>
+            <IconWrapper bg="#5BB3B7">
+              <Icon src={img3} />
+            </IconWrapper>
+
+            <Title>Extensive List of Technical Services</Title>
+            <Desc>
+              Whether you need to hire a software engineer with expertise in
+              React, Golang, DevOps, or Salesforce, we have the engineering
+              talent in place across a wide variety of technical stacks and
+              services to meet your organization’s needs.
+            </Desc>
+          </Card>
+          <Card>
+            <IconWrapper bg="#ADCB50">
+              <Icon src={img4} />
+            </IconWrapper>
+
+            <Title>Efficient Ramp-up Times</Title>
+            <Desc>
+              We understand that companies are expected to do more with less and
+              consistently justify ROI. When you hire Andela engineers, you can
+              expect that they’ll be efficiently onboarded and ready to deliver
+              value up to 70% faster than industry average onboarding times.
+            </Desc>
+          </Card>
+          <Card>
+            <IconWrapper bg="#3359DF">
+              <Icon src={img5} />
+            </IconWrapper>
+
+            <Title>Embedded Team Members</Title>
+            <Desc>
+              Andela engineers are not just part-time support but rather fully
+              embedded into your organization, aligned with client timezone
+              needs regardless of location.
+            </Desc>
+          </Card>
+          <Card>
+            <IconWrapper bg="#FFAF30">
+              <Icon src={img6} />
+            </IconWrapper>
+
+            <Title>Freedom to Focus on Core Business</Title>
+            <Desc>
+              After onboarding your distributed team of Andelans, we provide
+              additional technical and/or project management support resources
+              as needed so you have the freedom to focus on your core business.
+            </Desc>
+          </Card>
         </CardWrapper>
       </Wrapper>
     </Container>
@@ -38,38 +96,19 @@ const ThirdComp = () => {
 
 export default ThirdComp;
 
-const ImageHolder = styled.div`
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: #3359df;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 768px) {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-`;
-
 const IconWrapper = styled.div`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #5bb3b7;
-  // background-color: ${({ bg }) => (bg ? "red" : "green")};
+  background-color: ${({ bg }) => bg};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-
-
+  margin-bottom: 20px;
 `;
 
-const Text = styled.div`
-  font-size: 30px;
+const Title = styled.div`
+  font-size: 32px;
   margin: 15px 0;
 
   @media screen and (max-width: 768px) {
@@ -82,7 +121,6 @@ const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 120px;
 
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -105,30 +143,6 @@ const Icon = styled.img`
   object-fit: contain;
 `;
 
-const Content = styled.div`
-  width: 900px;
-  text-align: center;
-
-  @media screen and (max-width: 768px) {
-    width: 90%;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 50px;
-  font-weight: 500;
-  line-height: 52px;
-  margin: 30px 0;
-  color: #1f2c46;
-
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    font-size: 25px;
-    margin: 15px 0;
-    text-align: center;
-  }
-`;
-
 const Desc = styled.div`
   font-size: 20px;
   line-height: 30px;
@@ -139,18 +153,6 @@ const Desc = styled.div`
 
   @media screen and (max-width: 768px) {
     font-size: 16px;
-  }
-`;
-
-const Image = styled.img`
-  width: 70px;
-  height: 70px;
-  background-color: #3359df;
-  object-fit: cover;
-
-  @media screen and (max-width: 768px) {
-    width: 40px;
-    height: 40px;
   }
 `;
 
@@ -165,7 +167,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  padding-bottom: 50px;
 
   @media screen and (max-width: 768px) {
     display: flex;
