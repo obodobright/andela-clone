@@ -42,9 +42,11 @@ const JoinDetails = () => {
 
 export default JoinDetails;
 const Img = styled.img`
-  width: %;
   height: 45px;
   object-fit: contain;
+  // @media (max-width: 768px) {
+  //   height: 30px;
+  // }
 `;
 const ImgHolder = styled.div`
   display: flex;
@@ -64,6 +66,9 @@ const Desc = styled.p`
   word-spacing: 1.6px;
   line-height: 1.3;
   color: #1f2c46;
+  @media (max-width: 768px) {
+    width: 430px;
+  }
 `;
 const Title = styled.div`
   font-size: 42px;
@@ -78,22 +83,20 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: center;
   padding: 20px;
+  padding-bottom: 00px;
   color: #1f2c46;
 `;
 
 const BackImg = styled.div`
   height: 500px;
   width: 100%;
-
   background: url("map_light-1.png");
   background-size: cover;
   background-position: ;
   position: absolute;
   overflow: hidden;
   top: -60px;
-  // // left: 30px;
 `;
 const Logo = styled.img`
   width: 120px;
@@ -117,6 +120,14 @@ const Container = styled.div`
   overflow: auto;
 
   @media (max-width: 768px) {
-    display: none;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    padding-bottom: 40px;
+    width: 100%;
+    min-height: 100vh;
+    // height: 100%;
+    background: white;
+    overflow: unset;
   }
 `;

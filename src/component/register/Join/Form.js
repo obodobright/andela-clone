@@ -291,8 +291,19 @@ const Button = styled.button`
   outline: none;
   border: 0;
   font-size: 16px;
+
+  @media (max-width: 768px) {
+    width: 320px;
+  }
 `;
 const CheckHolder = styled.div`
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+  }
   margin: 25px 20px;
 
   label {
@@ -380,5 +391,6 @@ const FormHolder = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 `;

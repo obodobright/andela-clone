@@ -76,6 +76,9 @@ const Icon = styled.div`
 `;
 const Logo = styled.img`
   width: 150px;
+  @media (max-width: 768px) {
+    width: 130px;
+  }
 `;
 const Img2 = styled.img`
   width: 70px;
@@ -86,15 +89,14 @@ const IconHolder = styled.div`
   align-items: center;
 `;
 const Flex1 = styled.div`
-  //   width: 100%;
-  //   max-width: 1070px;
-  //   margin: 0 auto;
-  //   padding-top: 70px;
-
   p {
     margin: 10px 0;
     font-size: 18px;
     opacity: 0.6;
+    font-weight: 100;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
   }
 `;
 const Flex2 = styled.div`
@@ -122,6 +124,10 @@ const Wrapper = styled.div`
   max-width: 1070px;
   margin: 0 auto;
   padding-top: 70px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: unset;
+  }
 `;
 const Container = styled.div`
   width: 100%;

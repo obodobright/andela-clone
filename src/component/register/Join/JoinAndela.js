@@ -17,5 +17,8 @@ export default JoinAndela;
 const Container = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
